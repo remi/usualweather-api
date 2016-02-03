@@ -1,7 +1,7 @@
 defmodule UsualWeather.WeatherReportController do
-  use UsualWeather.Web, :controller
-  alias UsualWeather.City
-  alias UsualWeather.WeatherReport
+  use Phoenix.Controller
+
+  alias UsualWeather.{City, Repo}
 
   def show(conn, %{"city_id" => city_id}) do
     query = City |> Repo.get_by(slug: city_id) |> Repo.preload(:weather_reports)

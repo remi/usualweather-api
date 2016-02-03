@@ -1,6 +1,5 @@
 defmodule CityImport do
-  alias UsualWeather.Repo
-  alias UsualWeather.City
+  alias UsualWeather.{City, Repo}
 
   @cities [
     "Toronto",

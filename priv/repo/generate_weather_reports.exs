@@ -1,8 +1,7 @@
 defmodule WeatherReportGeneration do
   require Ecto.Query
 
-  alias UsualWeather.Repo
-  alias UsualWeather.City
+  alias UsualWeather.{City, Repo}
 
   def generate! do
     Repo.all(Ecto.Query.from c in City)

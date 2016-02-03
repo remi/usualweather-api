@@ -1,5 +1,7 @@
 defmodule UsualWeather.City do
-  use UsualWeather.Web, :model
+  use Ecto.Schema
+
+  import Ecto.Changeset, only: [cast: 4, get_field: 2, put_change: 3]
 
   schema "cities" do
     field :slug, :string

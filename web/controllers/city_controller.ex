@@ -1,6 +1,9 @@
 defmodule UsualWeather.CityController do
-  use UsualWeather.Web, :controller
-  alias UsualWeather.City
+  use Phoenix.Controller
+
+  require Ecto.Query
+
+  alias UsualWeather.{City, Repo}
 
   def index(conn, _params) do
     cities = City |> Ecto.Query.order_by(asc: :name) |> Repo.all

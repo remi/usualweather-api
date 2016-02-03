@@ -1,5 +1,5 @@
 defmodule UsualWeather.Router do
-  use UsualWeather.Web, :router
+  use Phoenix.Router
 
   pipeline :api do
     plug :accepts, ["json"]

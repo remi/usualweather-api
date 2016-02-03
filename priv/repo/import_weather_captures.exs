@@ -1,6 +1,5 @@
 defmodule WeatherCaptureImport do
-  alias UsualWeather.Repo
-  alias UsualWeather.City
+  alias UsualWeather.{City, Repo}
 
   @data_directory System.get_env("DATA_DIRECTORY")
 

@@ -1,5 +1,5 @@
 defmodule UsualWeather.WeatherReportView do
-  use UsualWeather.Web, :view
+  use Phoenix.View, root: "web/templates"
 
   def render("index.json", %{weather_reports: weather_reports}) do
     %{weather_reports: render_many(weather_reports, UsualWeather.WeatherReportView, "weather_report.json")}
