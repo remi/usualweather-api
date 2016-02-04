@@ -8,6 +8,7 @@ defmodule UsualWeather.Router do
   scope "/", UsualWeather do
     pipe_through :api
 
+    get "/", RootController, :show
     get "/cities", CityController, :index
     get "/weather-reports", WeatherReportController, :show
   end
