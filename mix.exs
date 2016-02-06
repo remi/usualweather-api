@@ -33,7 +33,7 @@ defmodule UsualWeather.Mixfile do
      {:phoenix_ecto, "~> 2.0"},
      {:postgrex, ">= 0.0.0"},
      {:csv, "~> 1.2.3"},
-     {:cors_plug, "~> 0.1.4"},
+     {:cors_plug, "~> 1.0.0"},
      {:plug_canonical_host, "~> 0.2.3"},
      {:slugger, "~> 0.1.0"},
      {:cowboy, "~> 1.0"}]

@@ -9,7 +9,7 @@ use Mix.Config
 config :usual_weather, UsualWeather.Endpoint,
   root: Path.expand("..", __DIR__),
   http: [port: System.get_env("PORT")],
-  url: [host: System.get_env("CANONICAL_HOST") || "localhost"],
+  url: [host: System.get_env("CANONICAL_HOST")],
   secret_key_base: System.get_env("SECRET_KEY_BASE"),
   debug_errors: false
 
