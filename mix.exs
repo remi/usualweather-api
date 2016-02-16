@@ -36,6 +36,7 @@ defmodule UsualWeather.Mixfile do
      {:cors_plug, "~> 1.0.0"},
      {:plug_canonical_host, "~> 0.2.3"},
      {:slugger, "~> 0.1.0"},
+     {:credo, "~> 0.2", only: [:dev, :test]},
      {:cowboy, "~> 1.0"}]
   end
 

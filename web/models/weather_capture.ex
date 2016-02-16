@@ -1,4 +1,8 @@
 defmodule UsualWeather.WeatherCapture do
+  @moduledoc """
+  Describes the WeatherCapture schema.
+  """
+
   use Ecto.Schema
 
   import Ecto.Changeset, only: [cast: 4]

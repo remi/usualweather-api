@@ -1,4 +1,8 @@
 defmodule UsualWeather.WeatherReport do
+  @moduledoc """
+  Describes the WeatherReport schema.
+  """
+
   use Ecto.Schema
 
   import Ecto.Changeset, only: [cast: 4]

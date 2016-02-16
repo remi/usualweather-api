@@ -1,4 +1,8 @@
 defmodule UsualWeather.City do
+  @moduledoc """
+  Describes the City schema.
+  """
+
   use Ecto.Schema
 
   import Ecto.Changeset, only: [cast: 4, get_field: 2, put_change: 3]

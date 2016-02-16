@@ -1,4 +1,8 @@
 defmodule UsualWeather.WeatherReportController do
+  @moduledoc """
+  The controller for weather report routes.
+  """
+
   use Phoenix.Controller
 
   alias UsualWeather.{City, Repo}

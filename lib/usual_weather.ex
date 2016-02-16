@@ -1,5 +1,10 @@
 defmodule UsualWeather do
+  @moduledoc """
+  The main application.
+  """
+
   use Application
+  alias UsualWeather.{Endpoint, Repo, Endpoint}
 
   # See http://elixir-lang.org/docs/stable/elixir/Application.html
   # for more information on OTP Applications
@@ -8,9 +13,9 @@ defmodule UsualWeather do
 
     children = [
       # Start the endpoint when the application starts
-      supervisor(UsualWeather.Endpoint, []),
+      supervisor(Endpoint, []),
       # Start the Ecto repository
-      supervisor(UsualWeather.Repo, []),
+      supervisor(Repo, []),
       # Here you could define other workers and supervisors as children
       # worker(UsualWeather.Worker, [arg1, arg2, arg3]),
     ]
@@ -24,7 +29,7 @@ defmodule UsualWeather do
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
   def config_change(changed, _new, removed) do
-    UsualWeather.Endpoint.config_change(changed, removed)
+    Endpoint.config_change(changed, removed)
     :ok
   end
 end

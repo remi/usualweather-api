@@ -1,4 +1,8 @@
 defmodule UsualWeather.Router do
+  @moduledoc """
+  The main application router.
+  """
+
   use Phoenix.Router
 
   pipeline :api do

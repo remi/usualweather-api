@@ -1,11 +1,18 @@
 defmodule UsualWeather.Endpoint do
+  @moduledoc """
+  The main application endpoint.
+  """
+
   use Phoenix.Endpoint, otp_app: :usual_weather
+
+  alias UsualWeather.{Endpoint, Router}
 
   if code_reloading? do
     plug Phoenix.CodeReloader
   end
 
-  plug PlugCanonicalHost, canonical_host: get_in(Application.get_env(:usual_weather, UsualWeather.Endpoint), [:url, :host])
+  host = get_in(Application.get_env(:usual_weather, Endpoint), [:url, :host])
+  plug PlugCanonicalHost, canonical_host: host
 
   plug Plug.RequestId
   plug Plug.Logger
@@ -19,5 +26,5 @@ defmodule UsualWeather.Endpoint do
   plug Plug.Head
   plug CORSPlug
 
-  plug UsualWeather.Router
+  plug Router
 end
